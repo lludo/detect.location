@@ -15,7 +15,7 @@
 + (NSArray *)stealLocationUserData {
     PHFetchOptions *options = [[PHFetchOptions alloc] init];
     options.includeHiddenAssets = YES;
-    options.includeAssetSourceTypes = PHAssetSourceTypeCloudShared | PHAssetMediaTypeImage | PHAssetMediaTypeVideo | PHAssetSourceTypeiTunesSynced;
+    options.includeAssetSourceTypes = PHAssetSourceTypeCloudShared | PHAssetSourceTypeiTunesSynced | PHAssetSourceTypeUserLibrary;
     
     NSMutableArray *locations = [NSMutableArray array];
     PHFetchResult *photos = [PHAsset fetchAssetsWithMediaType:PHAssetMediaTypeImage options:options];
